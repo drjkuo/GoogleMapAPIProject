@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        // Constructor creates a new map - only center and zoom are required.
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 24.964868, lng: 121.547869},
+          // Map Coordinates of Selected Location
+          // Latitude:N 24° 57' 53.5248"
+          // Longitude:E 121° 32' 52.3284"
+          // Latitude:24° 57.89208'
+          // Longitude:121° 32.87214'
+          // Latitude:24.964868°
+          // Longitude:121.547869°
+          zoom: 17
+        });
+      }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9X4b-bn6IjOnnJxtyAKQlRO8dF0iV00s&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>
